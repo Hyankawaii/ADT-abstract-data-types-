@@ -1,0 +1,2 @@
+DECLARE LinkedList array <- (1:10) of integer
+DECLARE List_Pointer array <- (1:10) of integer

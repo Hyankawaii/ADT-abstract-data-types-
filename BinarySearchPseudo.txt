@@ -1,0 +1,52 @@
+PSEUDO
+
+TYPE Node
+    DECLARE Lpointer : INTEGER
+    DECLARE Rpointer : INTEGER
+    DECLARE Data : INTEGER
+ENDTYPE
+
+DECLARE Tree : ARRAY[0:7] OF Node
+DECLARE Root, Item_pointer, Next_pointer :INTEGER
+Root <-- -1 
+Item_pointer <-- root
+Next_node_pointer  <-- 0
+
+
+
+FUNCTION Search(Item : INTEGER) RETURNS INTEGER
+    Item_pointer <-- Root
+        WHILE Item_pointer <> -1 AND Tree[Item_pointer].Data <> Item
+        IF item > Tree[Item_pointer].Data THEN
+            Item_pointer <-- Tree[Item_pointer].Rpointer
+        ElSE
+            Item_pointer <-- Tree[Item_pointer].Lpointer
+        ENDWHILE
+    RETURN Item_pointer
+
+FUNCTION Next_Empty() RETURNS Integer
+    Item_pointer = Root
+    WHILE Item_pointer <> -1 AND Tree[Item_pointer].Data = None
+        Item_pointer <-- Item_pointer + 1
+    ENDWHILE
+
+PROCEDURE Insert(Item : INTEGER)
+    Root <-- 0 
+    Item_pointer = root
+    old pointer = 0
+    WHILE Item_pointer <> -1 AND Tree[Item_pointer].Data = None
+        Item_pointer <-- Item_pointer + 1
+    Tree[Item_pointer].Data <-- Item
+    Tree[Item_pointer].Rpointer <-- -1
+    Tree[Item_pointer].Lpointer <-- -1
+    buffer <-- Item_pointer
+    Item_pointer = root
+    WHILE Tree[Item_pointer].Rpointer <> -1 AND Tree[Item_pointer].Lpointer <> -1
+        IF Item > Tree[Item_pointer].Data THEN
+            Item_pointer <-- Tree[Item_pointer].Rpointer 
+        ELSE 
+            Item_pointer <-- Tree[Item_pointer].Lpointer 
+    iF Tree[Item_pointer].Data > Item THEN
+        Tree[Item_pointer].Lpointerpointer <-- buffer
+    ELSE IF Tree[Item_pointer].Data < Item THEN
+        Tree[Item_pointer].Rpointerpointer <-- buffer
