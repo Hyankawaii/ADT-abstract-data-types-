@@ -5,7 +5,6 @@ TYPE Node
     DECLARE Rpointer : INTEGER
     DECLARE Data : INTEGER
 ENDTYPE
-#pain#
 DECLARE Tree : ARRAY[0:7] OF Node
 DECLARE Root, Item_pointer, Next_pointer :INTEGER
 Root <-- -1 
