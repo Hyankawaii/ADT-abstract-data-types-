@@ -26,5 +26,5 @@ def fibonacci2(num1, num2, repititions):
   if repititions != 0:
     print(num2)
     fibonacci(num2, (num1 +num2), repititions - 1)
-fibonacci2(0, 1, 4)
+fibonacci2(0, 1, 10)
 
