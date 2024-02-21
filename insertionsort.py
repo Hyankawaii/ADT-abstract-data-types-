@@ -27,14 +27,16 @@ lower <-- 0
 FOR index  <-- 1 TO LENGTH (array) 
     place <-- index - 1
     BUFFER <-- array(index)
-    IF buffer > array[place] THEN
-        WHILE array[place + 1] > array[place] AND place >= 0
-            temp <-- array[place]
-            array[place] <-- array[place + 1]
-            array[place + 1] <-- temp
-            place = place + 1
+    IF buffer < array[place] THEN
+        WHILE array[place + 1] >  array[place] AND place >= 0
+            
+            array[place + 1] <-- array[place]
+            place = place - 1
+
         ENDWHILE
+        array[place] <-- buffer
     ENDIF
+
 ENDFOR
 
             

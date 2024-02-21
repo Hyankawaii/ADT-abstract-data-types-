@@ -1,8 +1,8 @@
-max_size = 10
+    max_size = 10
 Stack = [None for i in range(max_size)]
 
 top = -1 #required for some reason
-
+#DECLARE item : Integer
  
 def Is_Empty():
     global top
@@ -43,7 +43,6 @@ def peek():
         print("stack is empty cannot pop, stack underflow")
     else:
         item = Stack[top]
-        Stack[top] = None
         return item
 push(10)
 print(Stack)
